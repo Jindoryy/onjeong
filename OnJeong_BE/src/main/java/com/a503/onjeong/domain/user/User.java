@@ -1,12 +1,3 @@
-package com.a503.onjeong.domain.user;
-
-import com.a503.onjeong.global.BaseEntity;
-import jakarta.persistence.*;
-
-@Entity
-public class User extends BaseEntity {
-
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long Id;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29b7388c12364c23f2617fa52b2ebfc39decf07db5fc39041417ead6aec669f2
+size 1090
