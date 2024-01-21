@@ -1,16 +1,3 @@
-package com.a503.onjeong.domain.user.repository;
-
-import com.a503.onjeong.domain.user.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-
-    Optional<User> findById(Long userId);
-
-    Optional<User> findByKakaoId(Long kakaoId);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fee49509d60e0e66186f18d0108b1387aa9d9b338ad978f2bd853a972d0e68a
+size 787

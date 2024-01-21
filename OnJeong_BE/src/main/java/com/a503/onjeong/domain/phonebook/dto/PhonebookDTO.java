@@ -6,8 +6,6 @@ import java.util.Map;
 
 @Data
 public class PhonebookDTO {
-
     private Long userId;
     private Map<String,String> phonebook = new HashMap<>();
-
 }
