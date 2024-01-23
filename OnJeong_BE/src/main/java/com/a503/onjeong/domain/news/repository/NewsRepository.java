@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ddd1211217fee8b5390c769ccecac0e2a1672337be496e7ac16059325498f9b
-size 593
+package com.a503.onjeong.domain.news.repository;
+
+import com.a503.onjeong.domain.news.News;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface NewsRepository extends JpaRepository<News, Long> {
+
+//    Optional<News> findByCategory(int category);
+
+}
