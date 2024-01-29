@@ -1,11 +1,13 @@
 package com.a503.onjeong.domain.phonebook.dto;
 
+import com.a503.onjeong.domain.phonebook.PhonebookId;
+import com.a503.onjeong.domain.user.User;
 import lombok.Data;
-import java.util.HashMap;
-import java.util.Map;
 
 @Data
 public class PhonebookDTO {
-    private Long userId;
-    private Map<String,String> phonebook = new HashMap<>();
+    private PhonebookId phonebookId;
+    private User user;
+    private String phonebookNum;
+    private String phonebookName;
 }
