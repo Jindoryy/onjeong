@@ -38,3 +38,6 @@ out/
 
 ### yml ###
 onjeong-firebase-admin-sdk.json
+
+### env ###
+.env
