@@ -1,4 +1,5 @@
 FROM openjdk:17
-ARG JAR_FILE=build/libs/onjeong.jar
-COPY ${JAR_FILE} /app/onjeong.jar
+WORKDIR /app
+ARG JAR_FILE=build/libs/onjeong-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} onjeong.jar
 ENTRYPOINT ["java","-jar","onjeong.jar"]
