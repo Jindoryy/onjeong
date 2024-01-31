@@ -7,7 +7,7 @@ import lombok.Data
 
 @Data
 class GroupDTO @Builder constructor(
-    private val groupId: Long,
+     val groupId: Long,
     private val ownerId: Long,
      val name: String,
     userList: List<UserDTO>
