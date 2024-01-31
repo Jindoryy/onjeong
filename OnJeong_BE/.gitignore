@@ -37,5 +37,4 @@ out/
 .vscode/
 
 ### yml ###
-*.yml
 onjeong-firebase-admin-sdk.json
