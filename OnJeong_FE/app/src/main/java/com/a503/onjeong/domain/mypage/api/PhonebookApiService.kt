@@ -1,17 +1,3 @@
-package com.a503.onjeong.domain.mypage.api
-
-import com.a503.onjeong.domain.mypage.dto.PhonebookAllDTO
-import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Query
-
-interface PhonebookApiService {
-
-    @POST("/phonebook/save")
-    fun phonebookSave(
-        @Body phonebookAllDTO: PhonebookAllDTO
-    ): Call<Void?>?
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6c06f20f3a196a9e22cd98c57224943ecad37bdc01add2fa0bf38cfafd20e6f
+size 593
