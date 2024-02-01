@@ -6,15 +6,11 @@ import lombok.Data
 
 @Data
 class PhonebookDTO @Builder constructor(
-    private val userId: Long,
+     val userId: Long,
      val freindId: Long,
      val phonebookNum: String,
-    val phonebookName: String,
-    isCheck: Boolean
-) {
-    var isCheck = false
-    init {
-        this.isCheck = isCheck
-    }
-}
+     val phonebookName: String,
+     var isChecked: Int
+)
+
 

@@ -1,13 +1,3 @@
-package com.a503.onjeong.domain.phonebook.dto;
-
-import com.a503.onjeong.domain.phonebook.PhonebookId;
-import com.a503.onjeong.domain.user.User;
-import lombok.Data;
-
-@Data
-public class PhonebookDTO {
-    private PhonebookId phonebookId;
-    private User user;
-    private String phonebookNum;
-    private String phonebookName;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:639c95e273a15ad54e792ece81fa5f0d0a137adcd57ce6592cc76da34966a0d6
+size 660
