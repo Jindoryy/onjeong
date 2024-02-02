@@ -10,6 +10,6 @@ interface NewsApiService {
 
     @Headers("Content-Type: application/json")
     @GET("/news/lists")
-    open fun newsList(): Call<List<News>>
+    fun newsList(): Call<List<News>>
 
 }
