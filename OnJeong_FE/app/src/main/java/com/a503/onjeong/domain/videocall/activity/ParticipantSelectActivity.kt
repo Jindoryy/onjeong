@@ -1,12 +1,3 @@
-package com.a503.onjeong.domain.videocall.activity
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.a503.onjeong.R
-
-class ParticipantSelectActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_participant_select)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26aee33121c2592bf78b08b594ae68a65ddc6d2c8e0ccd7bc34800f9c3007b91
+size 2370
