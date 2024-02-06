@@ -13,5 +13,9 @@ class UserDTO @Builder constructor(
     fun getName(): String {
         return name
     }
+
+    fun getUserId(): Long {
+        return userId
+    }
 }
 
