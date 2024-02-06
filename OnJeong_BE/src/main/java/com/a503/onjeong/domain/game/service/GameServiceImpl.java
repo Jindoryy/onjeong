@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f52f36ac1ffc621e11bb7add2a2307a063c01621fc2693009424b3e212b270d2
-size 546
+package com.a503.onjeong.domain.game.service;
+
+import com.a503.onjeong.domain.game.Game;
+import com.a503.onjeong.domain.game.repository.GameRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class GameServiceImpl implements GameService{
+}
