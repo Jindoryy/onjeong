@@ -10,7 +10,8 @@ class PhonebookDTO @Builder constructor(
      val freindId: Long,
      val phonebookNum: String,
      val phonebookName: String,
-     var isChecked: Int
+     var isChecked: Int,
+     var profileUrl:String
 )
 
 
