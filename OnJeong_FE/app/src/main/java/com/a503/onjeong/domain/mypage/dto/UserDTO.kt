@@ -9,5 +9,13 @@ class UserDTO @Builder constructor(
     private val userId: Long,
     private val name: String,
     private val phoneNumber: String
-)
+) {
+    fun getName(): String {
+        return name
+    }
+
+    fun getUserId(): Long {
+        return userId
+    }
+}
 

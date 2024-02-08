@@ -1,9 +1,9 @@
 package com.a503.onjeong.domain.user.service;
 
-import com.a503.onjeong.domain.user.dto.FcmTokenDto;
+import com.a503.onjeong.domain.user.dto.FcmTokenRequestDto;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface UserService {
-    void updateFcmToken(FcmTokenDto fcmTokenDto);
+    void updateFcmToken(FcmTokenRequestDto fcmTokenRequestDto);
 }
