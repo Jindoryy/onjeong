@@ -7,7 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class WeatherRequestDto {
 
-    private String sido;
+    private String sido1;
+    private String sido2;
     private String gugun;
     private String dong;
 }
