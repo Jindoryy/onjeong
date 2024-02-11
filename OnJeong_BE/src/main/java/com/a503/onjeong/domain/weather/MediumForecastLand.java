@@ -1,21 +1,3 @@
-package com.a503.onjeong.domain.weather;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Entity
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class MediumForecastLand {
-
-    @Id
-    @Column(name = "sido")
-    private String sido;
-
-    @Column(name = "code")
-    private String code;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83110d9865619e6977558ed72311a94b2063105e10784c764afbaf6b374c420e
+size 787

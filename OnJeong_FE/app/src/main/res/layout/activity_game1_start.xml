@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</RelativeLayout>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d495576fc0833fed1d971413844f74c75600112621367f77f845e647cc09bb7
+size 14527
