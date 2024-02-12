@@ -1,13 +1,3 @@
-package com.a503.onjeong.domain.user.controller;
-
-import com.a503.onjeong.domain.user.dto.FcmTokenDto;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
-@Controller
-public interface UserController {
-    @PatchMapping("/fcm-token")
-    ResponseEntity<Void> updateFcmToken(@RequestBody FcmTokenDto fcmTokenDto);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a45b7beb3084a3975395915fedfc1635d03821d346f6b1154cdc50b27983e6c7
+size 1086
