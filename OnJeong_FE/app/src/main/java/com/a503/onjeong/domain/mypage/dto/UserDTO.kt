@@ -8,7 +8,8 @@ import lombok.Data
 class UserDTO @Builder constructor(
     private val userId: Long,
     private val name: String,
-    private val phoneNumber: String
+    val phoneNumber: String,
+    val profileUrl: String
 ) {
     fun getName(): String {
         return name
