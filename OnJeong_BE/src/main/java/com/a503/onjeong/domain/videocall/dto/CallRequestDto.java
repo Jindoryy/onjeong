@@ -10,4 +10,5 @@ import java.util.ArrayList;
 public class CallRequestDto {
     ArrayList<Long> userIdList;
     String sessionId;
+    String callerName;
 }
