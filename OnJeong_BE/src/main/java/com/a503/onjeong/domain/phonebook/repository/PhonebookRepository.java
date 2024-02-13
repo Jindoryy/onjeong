@@ -1,15 +1,3 @@
-package com.a503.onjeong.domain.phonebook.repository;
-
-import com.a503.onjeong.domain.phonebook.Phonebook;
-import com.a503.onjeong.domain.phonebook.PhonebookId;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-import java.util.Optional;
-
-@Repository
-public interface PhonebookRepository extends JpaRepository<Phonebook, PhonebookId> {
-
-    Optional<List<Phonebook>> findAllByUserId(Long userId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1534eee22b8a9372cdbcd39ca41cd7515c190e75a2753d9e2dc06ef280f02dca
+size 708
