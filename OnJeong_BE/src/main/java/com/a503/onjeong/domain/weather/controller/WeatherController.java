@@ -2,6 +2,7 @@ package com.a503.onjeong.domain.weather.controller;
 
 import com.a503.onjeong.domain.weather.dto.WeatherRequestDto;
 import com.a503.onjeong.domain.weather.dto.WeatherResponseDto;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,5 +13,5 @@ import java.util.List;
 public interface WeatherController {
 
     @PostMapping("/info")
-    List<WeatherResponseDto> getWeather(@RequestBody WeatherRequestDto requestDto);
+    ResponseEntity<List<WeatherResponseDto>> getWeather(@RequestBody WeatherRequestDto requestDto);
 }
