@@ -7,4 +7,6 @@
     <color name="main_color">#F6BD4E</color>
     <color name="check_gray">#ACA9A9</color>
     <color name="red">#D1180B</color>
+    <color name="gray">#D3D1D1</color>
+    <color name="heavy_gray">#6A5959</color>
 </resources>
