@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class LoginResponseDto {
-    Long userId;
+    private Long userId;
 }

@@ -16,12 +16,4 @@ public class Game {
     @Column(name = "game_name")
     private String name;
 
-    @Builder
-    public Game(
-            Long id,
-            String name
-    ) {
-        this.id = id;
-        this.name = name;
-    }
 }
