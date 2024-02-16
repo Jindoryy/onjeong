@@ -1,9 +1,3 @@
-package com.a503.onjeong.domain.user.repository;
-
-import com.a503.onjeong.domain.user.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24ee642ae65c3d0adfd66c4a01fbf034c7eb93df8eedf58f6b25379adf9a3d2b
+size 825

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="30dp"/> <!-- 버튼의 모서리를 둥글게 조절 -->
+    <solid android:color="@color/main_color"/> <!-- 버튼의 배경 색상 -->
+</shape>

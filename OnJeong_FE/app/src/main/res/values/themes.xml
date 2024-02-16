@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OnJeong" parent="Theme.AppCompat">
+        <!-- Customize your light theme here. -->
+<!--        <item name="colorPrimary">@color/white</item>-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="Theme.OnJeong" parent="Base.Theme.OnJeong" />
+</resources>

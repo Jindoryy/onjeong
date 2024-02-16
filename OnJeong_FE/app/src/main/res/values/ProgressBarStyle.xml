@@ -1,0 +1,6 @@
+<resources>
+    <!-- 기본 ProgressBar 스타일 -->
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/black</item> <!-- 로딩 바 색상을 흰색으로 설정 -->
+    </style>
+</resources>
