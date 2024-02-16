@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:85c1f8a5f03a4d012c9b3be84bb898e78b21d39e20c84eef1e3aa2145153c6b9
-size 2254
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_main_bar" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ready_text"
+        style="@style/semi_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=" 게임을 시작하면 맨처음 모든 블럭들의 색을 보여줍니다. \n 제한시간 1분동안 모든 블럭들의 색을 맞추시면 다음 라운드로 갈 수 있습니다. \n 3라운드까지 플레이 할 수 있으며 블럭을 잘못 뒤집으면 점수가 감점됩니다. \n 추가적으로 라운드를 완료하게 되면 남은 시간만큼 점수가 플러스 됩니다 \n\n\n 준비가 완료되었으면 게임시작 버튼을 눌러 게임을 시작해주세요"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/large"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_round_main_color_button"
+            android:backgroundTint="@color/charcoal"
+            android:textColor="@color/main_color"
+            android:text="취소" />
+
+        <Button
+            android:id="@+id/gameStart"
+            style="@style/large"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_round_main_color_button"
+            android:text="게임시작" />
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

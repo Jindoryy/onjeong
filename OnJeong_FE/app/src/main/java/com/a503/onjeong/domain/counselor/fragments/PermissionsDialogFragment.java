@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4981e8ced88f5a8e86e83de5794ae188e9272ab9e86c347b1275a7df1ac8ec46
-size 1078
+package com.a503.onjeong.domain.counselor.fragments;
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
+import com.a503.onjeong.R;
+import com.a503.onjeong.domain.counselor.activity.CounselorActivity;
+
+
+public class PermissionsDialogFragment extends DialogFragment {
+
+    private static final String TAG = "PermissionsDialog";
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.permissions_dialog_title);
+        builder.setMessage(R.string.no_permissions_granted)
+                .setPositiveButton(R.string.accept_permissions_dialog, (dialog, id) -> ((CounselorActivity) getActivity()).askForPermissions())
+                .setNegativeButton(R.string.cancel_dialog, (dialog, id) -> Log.i(TAG, "User cancelled Permissions Dialog"));
+        return builder.create();
+    }
+}

@@ -1,3 +1,362 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9aae50f9a92243f7d0faa279a9555c3a971aa139d3b63ca1b2003626c391e3ef
-size 14209
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".domain.login.activity.LoginActivity">
+
+    <include layout="@layout/activity_main_bar"
+        android:id="@+id/main_bar"/>
+    <!-- 추가: TextView 정의 -->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+            <!-- 첫 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/oneImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/oneWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/oneTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+            <!-- 두 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/twoImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/twoWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+
+                <TextView
+                    android:id="@+id/twoTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+            <!-- 세 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/threeImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/threeWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/threeTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+            <!-- 네 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/fourImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/fourWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/fourTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+            <!-- 다섯번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/fiveImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/fiveWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/fiveTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+            <!-- 첫 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/sixImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/sixWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/sixTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+            <!-- 첫 번째 행 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/sevenImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/sevenWeek"
+                    style="@style/regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="0월 0일" />
+
+                <TextView
+                    android:id="@+id/sevenTemperature"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0°C" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/check_gray" /> <!-- 간격 및 선 -->
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView13"
+        style="@style/semi_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="주간예보"
+        app:layout_constraintStart_toStartOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@id/scrollView2"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/currentTemperature"
+        style="@style/semi_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0°C"
+        app:layout_constraintStart_toStartOf="@id/currentImage"
+        app:layout_constraintEnd_toEndOf="@id/currentImage"
+        app:layout_constraintTop_toBottomOf="@id/currentImage"
+        android:layout_marginTop="5dp"
+         />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울특별시 강남구 역삼동"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_bar"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:id="@+id/currentSky"
+        style="@style/regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="맑음"
+        app:layout_constraintTop_toBottomOf="@id/currentTemperature"
+        app:layout_constraintStart_toStartOf="@id/currentTemperature"
+        app:layout_constraintEnd_toEndOf="@id/currentTemperature"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/currentImage"
+        android:layout_width="83dp"
+        android:layout_height="56dp"
+
+        app:layout_constraintStart_toStartOf="@id/address"
+        app:layout_constraintEnd_toEndOf="@id/address"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/sunny" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

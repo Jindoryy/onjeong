@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee7a60c886109a71bbc80f3e8f218d0114b5e84f2415de132bc60c3c369fce88
-size 1610
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="배성준"
+        app:layout_constraintEnd_toEndOf="@id/user_image"
+        app:layout_constraintStart_toStartOf="@id/user_image"
+        app:layout_constraintTop_toBottomOf="@id/user_image" />
+
+    <ImageView
+        android:id="@+id/select_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/check_circle"
+        app:layout_constraintBottom_toBottomOf="@id/user_image"
+        app:layout_constraintStart_toStartOf="@id/user_image"
+        android:layout_marginBottom="90dp"
+        android:layout_marginStart="90dp"
+        app:tint="@color/check_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

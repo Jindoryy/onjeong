@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f8ae391c1b3caf6ceffaf6d16dea8760d262e8e6a3b4fdccc9af37a92734088
-size 677
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/peer_container"
+    android:layout_width="match_parent"
+    android:layout_height="212dp">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/local_gl_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:visibility="visible">
+    </org.webrtc.SurfaceViewRenderer>
+
+    <TextView
+        android:id="@+id/main_participant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/accent"/>
+</FrameLayout>

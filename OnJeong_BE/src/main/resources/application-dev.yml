@@ -1,3 +1,72 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee72367b6a8ed057ac662dae8bf355e4481b04a5c9e0f85182bdb14b11691fa7
-size 1374
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      maximum-pool-size: 180 #최대 pool 크기
+      minimum-idle: 10 #최소 pool 크기
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Seoul
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+kakao:
+  REST_KEY: ${KAKAO_REST_KEY}
+  REDIRECT_URI: ${KAKAO_REDIRECT_URI}
+
+jwt:
+  secret_key: ${JWT_SECRET_KEY}
+  issuer: ${JWT_ISSUER}
+
+phone:
+  API_KEY: ${PHONE_API_KEY}
+  API_SECRET_KEY: ${PHONE_API_SECRET_KEY}
+  DOMAIN: ${PHONE_DOMAIN}
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${CLOUD_AWS_CREDENTIALS_ACCESSKEY}
+      secretKey: ${CLOUD_AWS_CREDENTIALS_SECRETKEY}
+    s3:
+      bucket: allfriend
+      dir: /allfriend
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+openvidu:
+  url: https://i10a503.p.ssafy.io/
+  secret: ${OPENVIDU_SECRET}
+
+firebase:
+  config: onjeong-firebase-admin-sdk.json
+  project:
+    id: ${FIREBASE_ID}
+
+weather:
+  API_KEY: ${WEATHER_API_KEY}
+
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql: trace

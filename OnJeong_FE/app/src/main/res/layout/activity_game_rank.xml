@@ -1,3 +1,178 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65063ac203f3b6a6a7742ba14d61c7004e427635d4a24212889082c849e44e2a
-size 6544
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/check_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_main_bar" />
+<!--상단 버튼바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Left Half -->
+            <Button
+                android:id="@+id/game1_rank"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="퍼즐 게임" />
+
+            <!-- Right Half -->
+            <Button
+                android:id="@+id/game2_rank"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="짝 맞추기" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--순위 리스트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:weightSum="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="6"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gmae_rank_no"
+                    style="@style/semi_large"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="순위" />
+                <!--좌측에는 이미지를 배치한 상태에서 우측에 이름과 설명을 배치하기 위해 하나로 묶음-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/game_rank_name"
+                        style="@style/semi_large"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="이름" />
+
+
+                    <TextView
+                        android:id="@+id/game_rank_score"
+                        style="@style/semi_large"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="점수" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/rankListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<!--내 점수 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:weightSum="6"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/my_rank_no"
+            style="@style/semi_large"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="순위" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/my_rank_name"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="이름" />
+
+
+            <TextView
+                android:id="@+id/my_rank_score"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="점수" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

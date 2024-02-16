@@ -1,3 +1,108 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:654cc5fab1c1f929927dce0dc431f2311121a205e59fe91a3bf2ecdd22caaa29
-size 5647
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.a503.onjeong">
+    <!-- url 사용을 위해 인터넷 접속 허가 -->
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 영상통화 permission -->
+    <uses-feature android:name="android.hardware.camera"/> <!-- 연락처 접근 권한 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 필요에 의해 사용 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--   앨범 접근 권한   -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission
+            android:name="android.permission.POST_NOTIFICATIONS"
+            android:minSdkVersion="33"/>
+
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name_korean"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.OnJeong"
+            android:usesCleartextTraffic="true"
+            tools:targetApi="31">
+        <activity
+                android:name=".domain.welfare.activity.WelfareActivity"
+                android:exported="false"
+                android:label="@string/title_activity_welfare"
+                android:theme="@style/Theme.OnJeong"/>
+        <activity
+                android:name=".domain.videocall.activity.UserSelectActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".domain.videocall.activity.GroupSelectActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".domain.videocall.activity.VideoCallActivity"
+                android:exported="false"/>
+        <activity android:name=".domain.videocall.activity.RejectCallActivity"/>
+
+        <activity
+                android:name=".domain.login.activity.AutoLoginActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".domain.login.activity.LoginActivity"/>
+        <activity android:name=".domain.login.activity.KakaoLoginActivity"/>
+        <activity android:name=".domain.login.activity.TelephoneActivity"/>
+        <activity android:name=".domain.login.activity.StartActivity"/>
+        <activity android:name=".domain.MainActivity"/>
+        <activity android:name=".domain.news.activity.NewsActivity"/>
+        <activity android:name=".domain.game.activity.GameActivity"/>
+        <activity android:name=".domain.game.activity.Game1Description"/>
+        <activity android:name=".domain.game.activity.Game2Description"/>
+        <activity android:name=".domain.game.activity.Game2Activity"/>
+        <activity android:name=".domain.game.activity.Game1Activity"/>
+        <activity android:name=".domain.game.activity.GameRankActivity"/>
+
+        <activity
+                android:name=".domain.weather.activity.WeatherActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".domain.mypage.activity.MyPageActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".domain.mypage.activity.GroupListActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".domain.mypage.activity.GroupCreateActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".domain.mypage.activity.GroupDetailActivity"
+                android:exported="true"/>
+        <activity android:name=".domain.education.activity.EducationActivity"/> <!-- firebase -->
+        <activity android:name=".domain.mypage.activity.ProfileSettingActivity" android:exported="true"/>
+        <activity android:name=".domain.mypage.activity.TelephoneEditActivity" android:exported="true"/>
+        android:exported="true" />
+        <activity android:name=".domain.counselor.activity.CounselorActivity"></activity>
+        <service
+                android:name=".global.firebase.FirebaseMessagingService"
+                android:exported="false"
+                tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

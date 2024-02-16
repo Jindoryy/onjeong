@@ -1,3 +1,104 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b72347b9e232820cd461998bb4a1d04839ddf61142c4da8c988651f1df06d26
-size 4260
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".domain.login.activity.TelephoneActivity">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/main_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="전화번호 인증"
+        app:layout_constraintEnd_toEndOf="@id/icon"
+        app:layout_constraintStart_toStartOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="전화번호를 인증해 주세요"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        style="@style/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/check_gray"
+        android:hint="전화번호를 입력하세요"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <Button
+        android:id="@+id/buttonAuth"
+        style="@style/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:text="인증번호 요청"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/editTextPhone"
+        app:layout_constraintStart_toStartOf="@id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
+
+    <EditText
+        android:id="@+id/editTextAuthCode"
+        style="@style/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/check_gray"
+        android:hint="인증번호를 입력하세요"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/editTextPhone"
+        app:layout_constraintStart_toStartOf="@id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
+
+    <Button
+        android:id="@+id/buttonAuthenticate"
+        style="@style/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:text="인증하기"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/editTextAuthCode"
+        app:layout_constraintStart_toStartOf="@id/editTextAuthCode"
+        app:layout_constraintTop_toBottomOf="@id/editTextAuthCode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

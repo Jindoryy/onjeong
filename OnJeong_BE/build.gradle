@@ -1,3 +1,75 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:997ded65af4d63775a547f6124d4be9de9747339d098088513f09e8ad258022c
-size 2069
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.a503'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // jpa + mysql
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // WebClient (HTTP Request)
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // Oauth2
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
+
+    // Json 라이브러리
+    implementation 'org.json:json:20220320'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+    // Spring Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // JAVA JWT
+    implementation("com.auth0:java-jwt:3.16.0")
+
+    // Gson 변환기 라이브러리
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.4'
+
+    // Scalars 변환기 라이브러리
+    implementation 'com.squareup.retrofit2:converter-scalars:2.6.4'
+
+    // 전화번호 인증 라이브러리
+    implementation 'net.nurigo:sdk:4.2.7'
+
+    // OpenVidu 라이브러리
+    implementation 'io.openvidu:openvidu-java-client:2.29.0'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-admin:9.1.1'
+
+    // S3 업로드 위한 aws 라이브러리
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.281'
+
+    // p6spy
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.7'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

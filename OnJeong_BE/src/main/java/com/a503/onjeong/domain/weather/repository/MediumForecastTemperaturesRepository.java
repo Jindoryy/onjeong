@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bac6db005d9f547cd31dd621e2a0d03d9bd0fc921050d7a53d2a0b651f8b37af
-size 891
+package com.a503.onjeong.domain.weather.repository;
+
+import com.a503.onjeong.domain.weather.MediumForecastTemperatures;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface MediumForecastTemperaturesRepository extends JpaRepository<MediumForecastTemperatures, String> {
+
+    // 시도1으로 code 찾기 (광역시)
+    @Query("select f from MediumForecastTemperatures f where f.sido = :sido1")
+    MediumForecastTemperatures findCodeBySidoOne(String sido1);
+
+    // 시도2로 code 찾기
+    @Query("select f from MediumForecastTemperatures f where f.sido = :sido2")
+    MediumForecastTemperatures findCodeBySidoTwo(String sido2);
+
+    // 구군으로 code 찾기
+    @Query("select f from MediumForecastTemperatures f where f.sido = :gugun")
+    MediumForecastTemperatures findCodeByGugun(String gugun);
+
+}

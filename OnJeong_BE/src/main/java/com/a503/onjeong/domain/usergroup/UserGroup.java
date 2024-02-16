@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f4f5e5a2095943ab1cbc74b91169b5155ed7acf68d0a14f2f1c6e226b2d0f0c
-size 1000
+package com.a503.onjeong.domain.usergroup;
+
+
+import com.a503.onjeong.domain.group.Group;
+import com.a503.onjeong.domain.user.User;
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicUpdate;
+
+@Entity
+@Getter
+@NoArgsConstructor
+@DynamicUpdate
+public class UserGroup {
+
+    @EmbeddedId
+    private UserGroupId userGroupId;
+
+    @MapsId("userId")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @MapsId("groupId")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "group_id")
+    private Group group;
+
+    @Builder
+    public UserGroup(
+            Long userId,
+            Long groupId,
+            User user,
+            Group group
+    ) {
+        this.userGroupId = UserGroupId.builder()
+                .groupId(groupId)
+                .userId(userId)
+                .build();
+        this.user=user;
+        this.group=group;
+    }
+}

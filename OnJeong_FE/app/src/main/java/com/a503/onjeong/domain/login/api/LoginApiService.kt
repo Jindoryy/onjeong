@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:86b80f624bac92b587cda4c0306f2d8b2a2de66b3682b56f3181d3c1ec1abcb4
-size 868
+package com.a503.onjeong.domain.login.api
+
+import com.a503.onjeong.domain.login.dto.LoginInfoResponseDto
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.Query
+
+interface LoginApiService {
+
+    @GET("/auth/signup")
+    fun signup(
+        @Header("Kakao-Access-Token") accessToken: String,
+        @Header("Kakao-Refresh-Token") refreshToken: String,
+        @Query("phoneNumber") phoneNumber : String
+    ): Call<Long>
+
+    @GET("/auth/login")
+    fun login(
+        @Header("Kakao-Access-Token") accessToken: String,
+        @Query("userId") userId : Long
+    ): Call<LoginInfoResponseDto>
+
+    @GET("auth/phone")
+    fun phone(
+        @Query("phoneNumber") phoneNumber :String
+    ): Call<String>
+
+    @GET("/auth/reissue")
+    fun reissue(
+        @Header("Refresh-Token") refreshToken :String
+    ): Call<Void>
+}

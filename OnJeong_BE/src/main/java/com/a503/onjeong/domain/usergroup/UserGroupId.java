@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7c3bba9de3affc65f447ab5fea9213a99acdf6ad6b4de18426f6271e5481910
-size 589
+package com.a503.onjeong.domain.usergroup;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+@Data
+@Embeddable
+@NoArgsConstructor
+public class UserGroupId implements Serializable {
+
+    @Column(name = "user_id")
+    private Long userId;
+
+    @Column(name = "group_id")
+    private Long groupId;
+
+    @Builder
+    public UserGroupId(
+            Long userId,
+            Long groupId
+    ) {
+        this.userId=userId;
+        this.groupId=groupId;
+    }
+}

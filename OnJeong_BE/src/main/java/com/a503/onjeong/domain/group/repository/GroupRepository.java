@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b81172b39ca7ade8718f93f7cc16cfde5e049349b08a75579e1e875527420dfc
-size 571
+package com.a503.onjeong.domain.group.repository;
+
+import com.a503.onjeong.domain.group.Group;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface GroupRepository extends JpaRepository<Group, Long> {
+
+    Optional<List<Group>> findAllByOwnerId(Long ownerId);
+
+}

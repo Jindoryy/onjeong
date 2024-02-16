@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:99b07a0fcc8d46142d8cca4c6ee8f07033873cf7e12c20933a3a8acdf61ad266
-size 779
+package com.a503.onjeong.domain.group.dto;
+
+import com.a503.onjeong.domain.user.dto.UserDTO;
+import lombok.Builder;
+import lombok.Data;
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+public class GroupDTO {
+    private Long groupId;
+    private Long ownerId;
+    private String name;
+    private List<UserDTO> userList;
+
+    @Builder
+    public GroupDTO(
+            Long groupId,
+            Long ownerId,
+            String name,
+            List<UserDTO> userList
+    ) {
+        this.groupId = groupId;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.userList = userList;
+    }
+    public void updateOwnerId (Long ownerId) {
+        this.ownerId = ownerId;
+    }
+    public void updateName (String name) {
+        this.name = name;
+    }
+
+}

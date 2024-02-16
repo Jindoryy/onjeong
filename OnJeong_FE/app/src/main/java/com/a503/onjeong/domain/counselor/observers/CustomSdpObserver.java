@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd5f586a921d3be608a34bb21d8fd92527a883b2d515ceff16a0da3fd155bc6e
-size 826
+package com.a503.onjeong.domain.counselor.observers;
+
+import android.util.Log;
+
+import org.webrtc.SdpObserver;
+import org.webrtc.SessionDescription;
+
+public class CustomSdpObserver implements SdpObserver {
+
+    private final String tag;
+
+    public CustomSdpObserver(String tag) {
+        this.tag = "SdpObserver-" + tag;
+    }
+
+    @Override
+    public void onCreateSuccess(SessionDescription sdp) {
+        Log.d(this.tag, "onCreateSuccess, SDP: " + sdp.toString());
+    }
+
+    @Override
+    public void onSetSuccess() {
+        Log.d(this.tag, "onSetSuccess");
+    }
+
+    @Override
+    public void onCreateFailure(String error) {
+        Log.e(this.tag, "onCreateFailure, error: " + error);
+    }
+
+    @Override
+    public void onSetFailure(String error) {
+        Log.e(this.tag, "onSetFailure, error: " + error);
+    }
+}

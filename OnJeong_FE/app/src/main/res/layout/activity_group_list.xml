@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f46bb8d86dd6a255a3a6e34fcedfd592ae72b601449691a48210b27ceb3620ff
-size 1541
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_main_bar" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/semi_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="모임을 수정하거나 추가하세요!" />
+
+    <Button
+        android:id="@+id/groupAddBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:backgroundTint="@color/light_gray"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
+
+    <ListView
+        android:id="@+id/groupListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        tools:ignore="NestedScrolling">
+
+    </ListView>
+
+
+</LinearLayout>

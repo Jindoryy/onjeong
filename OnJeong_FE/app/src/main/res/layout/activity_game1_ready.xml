@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e034ab9575d3892945825cff46b878d564fb3ac23275ffea6ff47b945357abc2
-size 2320
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_result">
+
+    <LinearLayout
+        android:id="@+id/text_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ready_text"
+            style="@style/semi_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="제한시간내에 화면에 보이는 블럭들을 \n 최대한 많이 터트려주세요. \n\n 게임을 시작하시겠습니까?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/end"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:backgroundTint="@color/charcoal"
+                android:textColor="@color/main_color"
+                android:text="취소" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/start"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:text="게임시작" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

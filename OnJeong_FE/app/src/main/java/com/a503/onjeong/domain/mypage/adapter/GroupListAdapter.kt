@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2e3c6946cbfd13c76842845e50c9731a021897d59b8fdb9dc7f016c17c6c9cf
-size 1019
+package com.a503.onjeong.domain.mypage.adapter
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.TextView
+import com.a503.onjeong.R
+import com.a503.onjeong.domain.mypage.dto.GroupDTO
+
+class GroupListAdapter(context: Context, resource: Int, objects: List<GroupDTO>) :
+    ArrayAdapter<GroupDTO>(context, resource, objects) {
+    private lateinit var adapter: GroupListAdapter
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val itemView = convertView ?: inflater.inflate(R.layout.activity_group_list_item, parent, false)
+
+        val groupItem = getItem(position)
+        val name: TextView = itemView.findViewById(R.id.groupName)
+        if (groupItem != null) {
+            name.text = groupItem.name
+        }
+        return itemView
+    }
+
+}

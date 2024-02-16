@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c711c908f2623eb2fd2d83c41539f7292f26b72550a43566c16a6bc54cf97348
-size 1532
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="regular" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/nanum_square_r</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="bold" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/nanum_square_b</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="large" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/nanum_square_b</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="semi_large" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/nanum_square_b</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="very_large" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/nanum_square_b</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

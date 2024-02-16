@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eff1a48d67829346c8f79cb4a80a1ee073501993e429229ac4ea1e8933ae1d97
-size 594
+package com.a503.onjeong.domain.phonebook;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+@Data
+@Embeddable
+@NoArgsConstructor
+public class PhonebookId implements Serializable {
+
+    @Column(name = "user_id")
+    private Long userId;
+
+    @Column(name = "friend_id")
+    private Long friendId;
+
+    @Builder
+    public PhonebookId(
+            Long userId,
+            Long friendId
+    ) {
+        this.userId=userId;
+        this.friendId=friendId;
+    }
+}

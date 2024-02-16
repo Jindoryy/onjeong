@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:814da3b86a9e431776a54292640565234a39ea778fe58c2128db985465619923
-size 1499
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".domain.videocall.activity.GroupSelectActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_main_bar" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/semi_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="모임을 선택하세요!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ListView
+        android:id="@+id/groupListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="NestedScrolling">
+
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

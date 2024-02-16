@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:495006c5511ac9ab9ef8273f7524aa762f35a7d4a56206ede63a94bf84219283
-size 1012
+package com.a503.onjeong.domain.weather.controller;
+
+import com.a503.onjeong.domain.weather.dto.WeatherRequestDto;
+import com.a503.onjeong.domain.weather.dto.WeatherResponseDto;
+import com.a503.onjeong.domain.weather.service.WeatherService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/weather")
+@RequiredArgsConstructor
+public class WeatherControllerImpl implements WeatherController {
+
+    private final WeatherService weatherService;
+
+    @PostMapping("/info")
+    public ResponseEntity<List<WeatherResponseDto>> getWeather(@RequestBody WeatherRequestDto requestDto) {
+        return ResponseEntity.ok().body(weatherService.getWeatherInfo(requestDto));
+
+    }
+}

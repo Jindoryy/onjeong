@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bce5475bd04f50d8745687909b41028658ea9b59c38d037ec3d99cc3487c1ae3
-size 841
+package com.a503.onjeong.global.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.AuthenticationException;
+
+public class FilterException extends AuthenticationException implements BaseException {
+
+    private ExceptionCodeSet exceptionCode;
+
+    public FilterException(ExceptionCodeSet exceptionCode) {
+        super(exceptionCode.getCode());
+        this.exceptionCode = exceptionCode;
+    }
+
+    public FilterException(String errorMessage) {
+        super(errorMessage);
+    }
+
+    @Override
+    public ExceptionCodeSet getExceptionCode() {
+        return this.exceptionCode;
+    }
+
+    @Override
+    public HttpStatus getHttpStatus() {
+        return this.exceptionCode.getHttpStatus();
+    }
+
+    @Override
+    public String getCode() {
+        return this.exceptionCode.getCode();
+    }
+}

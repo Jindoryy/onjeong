@@ -1,3 +1,117 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e91146ed3bca011a6f21818202748b6c9397c87380f53e8fac7d0a3c96aa334
-size 4014
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/check_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_main_bar" />
+
+    <LinearLayout
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/category1"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:text="정치"
+            android:translationZ="3dp" />
+
+        <Button
+            android:id="@+id/category2"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:text="경제"
+            android:translationZ="3dp" />
+
+
+        <Button
+            android:id="@+id/category3"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:text="사회"
+            android:translationZ="3dp" />
+
+        <Button
+            android:id="@+id/category4"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:text="생활"
+            android:translationZ="3dp" />
+
+
+        <Button
+            android:id="@+id/category5"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:text="세계"
+            android:translationZ="3dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/check_gray"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <!-- 로딩 바 -->
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyle" />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/newsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/check_gray"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        />
+
+</LinearLayout>

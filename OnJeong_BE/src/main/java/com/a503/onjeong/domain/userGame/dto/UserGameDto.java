@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30a25bdf5966ddfa4d7f9ed3a0c351d15e0425cc231110c6b1c94925bdeed0b2
-size 695
+package com.a503.onjeong.domain.userGame.dto;
+
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.jetbrains.annotations.NotNull;
+@NoArgsConstructor
+@Data
+public class UserGameDto {
+    private Long id;
+    private Long userId;
+    private String userName;
+    private Long gameId;
+    private Long userGameScore;
+
+    @Builder
+    public UserGameDto(
+            Long id,
+            Long userId,
+            String userName,
+            Long gameId,
+            Long userGameScore
+    ) {
+        this.id = id;
+        this.userId = userId;
+        this.userName = userName;
+        this.gameId = gameId;
+        this.userGameScore = userGameScore;
+    }
+
+}

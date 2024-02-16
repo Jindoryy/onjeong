@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31578e0c9b78e9f37ea2a9282965483e1209478848825c46f9aa631005024f01
-size 1777
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <!--     이미지, 기사명, 설명을 하나로 묶음-->
+    <LinearLayout
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/rank_no"
+            style="@style/semi_large"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:text="순위"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rank_name"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="이름" />
+
+
+            <TextView
+                android:id="@+id/rank_score"
+                style="@style/semi_large"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:text="점수" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

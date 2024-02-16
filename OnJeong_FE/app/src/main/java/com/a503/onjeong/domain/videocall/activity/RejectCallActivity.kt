@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:055c692b509c37f5bfb3daabbbedef89ff8c3fa08c4ac4fab8fc8d58c7b62f0c
-size 698
+package com.a503.onjeong.domain.videocall.activity
+
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+
+class RejectCallActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val notificationId = intent.getIntExtra("notificationId", 0)
+        // Cancel the notification
+        val notificationManager =
+            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.cancel(notificationId)
+
+        // Finish the activity
+        finish()
+    }
+}

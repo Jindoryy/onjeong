@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6ca4ea148cacf5ca897807e608f325bc17c4e4ec0561e27688a0319387524a5
-size 593
+package com.a503.onjeong.domain.weather.service.strategy;
+
+import com.a503.onjeong.domain.weather.dto.WeatherRequestDto;
+import com.a503.onjeong.domain.weather.dto.WeatherResponseDto;
+import com.a503.onjeong.domain.weather.service.WeatherInfoCacheResponse;
+
+import java.util.List;
+
+public interface WeatherStrategy {
+
+    WeatherInfoCacheResponse getWeatherInfoByCaching(List<WeatherResponseDto> weatherResponseDtoList, WeatherRequestDto weatherRequestDto);
+
+    List<WeatherResponseDto> getWeatherInfo(List<WeatherResponseDto> weatherResponseDtoList, WeatherRequestDto weatherRequestDto);
+
+}

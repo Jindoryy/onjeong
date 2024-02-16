@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83110d9865619e6977558ed72311a94b2063105e10784c764afbaf6b374c420e
-size 787
+package com.a503.onjeong.domain.weather;
+
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class MediumForecastLand {
+
+    @Id
+    @Column(name = "sido")
+    private String sido;
+
+    @Column(name = "code")
+    private String code;
+
+    @Column(name = "base_time")
+    private String base;
+
+    @OneToMany(mappedBy = "mediumForecastLand")
+    private List<SkyStatus> skyStatusList = new ArrayList<>();
+
+    public void updateSkyStatusList(List<SkyStatus> skyStatusList){
+        this.skyStatusList = skyStatusList;
+    }
+
+    public void updateBase(String base){
+        this.base = base;
+    }
+}

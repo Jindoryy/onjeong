@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c666dd5729a938ce13f439660682dbcb9a0a19c8373f0497b960dd152141fa35
-size 541
+package com.a503.onjeong.domain.login.api
+
+import com.a503.onjeong.domain.login.dto.KakaoDto
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface KakaoApiService {
+    @GET("/oauth/authorize")
+    fun getAuthorizationCode(
+        @Query("client_id") id: String,
+        @Query("redirect_uri") redirect: String,
+        @Query("response_type") type: String = "code",
+        ): Call<Void>
+
+    @GET("/auth/kakao/token")
+    fun requestToken(
+        @Query("code") code: String
+    ): Call<KakaoDto.Token>
+}

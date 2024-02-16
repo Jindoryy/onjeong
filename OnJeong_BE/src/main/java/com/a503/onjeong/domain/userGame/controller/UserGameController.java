@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6e31a928f0bdb78af628e3626d12ad4c9c2e5adf5ac8433b92bf7c321be350f
-size 618
+package com.a503.onjeong.domain.userGame.controller;
+
+import com.a503.onjeong.domain.userGame.UserGame;
+import com.a503.onjeong.domain.userGame.dto.UserGameDto;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
+
+@Controller
+public interface UserGameController {
+     List<UserGameDto> topScoreList(@RequestParam Long gameId);
+
+     UserGameDto scoreSave(@RequestBody UserGameDto userGameDto);
+
+     UserGameDto scoreDetails(@RequestParam Long userId, Long gameId);
+
+
+    }

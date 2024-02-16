@@ -1,3 +1,101 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c965f02d38f78c300b170e21333ff7a32db37a31c9f21f868b2cc62af8a60d39
-size 3603
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".domain.login.activity.StartActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/onjeong_icon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/main_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/onjeong_text"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/onjung"
+        app:layout_constraintEnd_toEndOf="@id/onjeong_icon"
+        app:layout_constraintStart_toStartOf="@id/onjeong_icon"
+        app:layout_constraintTop_toBottomOf="@id/onjeong_icon"
+        android:layout_marginEnd="5dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/onjeong_text"
+        app:layout_constraintEnd_toEndOf="@id/onjeong_text"
+        app:layout_constraintTop_toBottomOf="@id/onjeong_text"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="온"
+            style="@style/large"
+            android:textColor="@color/main_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="라인에서 가족, 지인과"
+            style="@style/regular"
+            android:layout_marginStart="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text1"
+        app:layout_constraintEnd_toEndOf="@id/text1"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="情"
+            android:textSize="28sp"
+            android:textColor="@color/main_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="을 나눠요"
+            style="@style/regular"
+            android:layout_marginStart="5dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="시작하기"
+        android:background="@drawable/rect_round_main_color_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="140dp"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

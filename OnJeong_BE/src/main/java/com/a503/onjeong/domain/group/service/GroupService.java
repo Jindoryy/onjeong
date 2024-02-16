@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:14de3b76a9d9d8bc076ee2a9b879a485a07a20b1947022284ac4d4371d8daf59
-size 516
+package com.a503.onjeong.domain.group.service;
+
+import com.a503.onjeong.domain.group.dto.GroupDTO;
+import com.a503.onjeong.domain.group.dto.GroupUserListDTO;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public interface GroupService {
+    List<GroupDTO> groupList(Long userId);
+
+    void groupCreate(GroupUserListDTO groupUserListDTO);
+
+    void groupDelete(Long groupId);
+
+    void groupUpdate(GroupUserListDTO groupUserListDTO);
+
+
+    GroupDTO groupDetail(GroupDTO groupDTO);
+}

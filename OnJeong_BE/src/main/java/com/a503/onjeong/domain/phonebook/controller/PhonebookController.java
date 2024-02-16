@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1346c40a26a54284ce2c1bf9865105ac346d62d138b685cb87fefb8f40f1141c
-size 610
+package com.a503.onjeong.domain.phonebook.controller;
+
+import com.a503.onjeong.domain.phonebook.dto.PhonebookAllDTO;
+import com.a503.onjeong.domain.phonebook.dto.PhonebookDTO;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public interface PhonebookController {
+    @PostMapping("")
+    ResponseEntity<Void> phonebookSave(@RequestBody PhonebookAllDTO phonebookAllDTO);
+
+    @GetMapping("")
+    ResponseEntity<List<PhonebookDTO>> phonebookList(
+            Long userId, @RequestParam(required = false) Long groupId);
+}

@@ -1,3 +1,100 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0eed4cdf2e393b442b7a472ce2c3fdaedadddbe121fd103bc007257ebb4aa7b
-size 3445
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_main_bar" />
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="280dp">
+
+        <View
+            android:id="@+id/ViewColorYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:background="#F6BD4E" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/white" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="" />
+
+
+    <Button
+        android:id="@+id/phoneNumEditBtn"
+        style="@style/bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:backgroundTint="@color/main_color"
+        android:text="번호 수정"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/groupSettingBtn"
+        style="@style/bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:backgroundTint="@color/main_color"
+        android:text="모임 관리"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/phoneBookBtn"
+        style="@style/bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:backgroundTint="@color/main_color"
+        android:text="연락처 동기화"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        style="@style/bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rect_round_main_color_button"
+        android:backgroundTint="@color/charcoal"
+        android:text="로그아웃"
+        android:textColor="@color/main_color"
+        android:textStyle="bold" />
+
+</LinearLayout>

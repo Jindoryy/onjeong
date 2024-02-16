@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:575acc1885c597155a585963654e60130341cd3ab2cbc92b1b7e742a611b2848
-size 1441
+package com.a503.onjeong.global.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(UserException.class)
+    public ResponseEntity<ErrorResponse> handleUserException(UserException e) {
+        return makeResponseFormat(e.getExceptionCode());
+    }
+
+    @ExceptionHandler(WeatherException.class)
+    public ResponseEntity<ErrorResponse> handleWeatherException(WeatherException e) {
+        return makeResponseFormat(e.getExceptionCode());
+    }
+
+    @ExceptionHandler(KakaoException.class)
+    public ResponseEntity<ErrorResponse> handleCommonException(KakaoException e) {
+        return makeResponseFormat(e.getExceptionCode());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleException(Exception e) {
+        return makeResponseFormat(ExceptionCodeSet.INTERNAL_SERVER_ERROR);
+    }
+
+    private ResponseEntity<ErrorResponse> makeResponseFormat(ExceptionCodeSet exceptionCode) {
+        return ResponseEntity.status(exceptionCode.getHttpStatus())
+                .body(ErrorResponse.builder()
+                        .code(exceptionCode.getCode())
+                        .message(exceptionCode.getMessage())
+                        .build()
+                );
+    }
+
+}

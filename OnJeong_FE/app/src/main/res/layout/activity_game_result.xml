@@ -1,3 +1,89 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87a750a1fd87821f2b5365aa0ef8efabb36056a611b97326f57ceceefd8bc4c5
-size 3457
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_result">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result_title"
+            style="@style/very_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="게임 종료" />
+        <!-- 게임 결과 텍스트 뷰 -->
+        <TextView
+            android:id="@+id/result_score"
+            style="@style/semi_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="게임 점수: 1000점" />
+
+        <!-- 유저 이름 텍스트 뷰 -->
+        <TextView
+            android:id="@+id/result_name"
+            style="@style/semi_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="유저 이름: " />
+
+        <!-- 랭킹 등수 텍스트 뷰 -->
+        <TextView
+            android:id="@+id/result_high_score"
+            style="@style/semi_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="최고 점수 : 2000점" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <!-- 나가기 버튼 -->
+            <Button
+                android:id="@+id/game_exit"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:backgroundTint="@color/charcoal"
+                android:textColor="@color/main_color"
+                android:text="나가기" />
+
+            <!-- 랭킹보기 버튼 -->
+            <Button
+                android:id="@+id/game_rank"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:text="순위보기" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

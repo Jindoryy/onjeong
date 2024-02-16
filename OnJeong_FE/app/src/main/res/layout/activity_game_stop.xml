@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9068ce7a34eed46940e619097eeb19e6cb429688d83eae34b6501049073d962e
-size 2141
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/game_result">
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result_title"
+            style="@style/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="게임을 이어서 하시겠습니까?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <!-- 나가기 버튼 -->
+            <Button
+                android:id="@+id/gameExit"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:backgroundTint="@color/charcoal"
+                android:textColor="@color/main_color"
+                android:text="나가기" />
+
+            <!-- 랭킹보기 버튼 -->
+            <Button
+                android:id="@+id/gameResume"
+                style="@style/large"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_round_main_color_button"
+                android:text="이어하기" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

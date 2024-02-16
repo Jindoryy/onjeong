@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:055c9a7c34fb6599407b15936c96618bd14d0790767f5123e454de2943a58378
-size 757
+package com.a503.onjeong.domain.phonebook.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+public class PhonebookDTO {
+    private Long freindId;
+    private Long userId;
+    private String phonebookNum;
+    private String phonebookName;
+    private int isChecked=0;
+    private String profileUrl;
+
+    @Builder
+    public PhonebookDTO(
+            Long userId,
+            Long freindId,
+            String phonebookNum,
+            String phonebookName,
+            int isChecked,
+            String profileUrl
+
+    ) {
+        this.userId = userId;
+        this.freindId = freindId;
+        this.phonebookNum = phonebookNum;
+        this.phonebookName = phonebookName;
+        this.isChecked=isChecked;
+        this.profileUrl=profileUrl;
+    }
+}
